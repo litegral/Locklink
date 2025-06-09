@@ -90,3 +90,31 @@ The application will be running at `http://127.0.0.1:8000/`.
 
 For a live production environment, please ensure you:
 -   Set `DEBUG=False` in your configuration (e.g., by adding `DEBUG=False` to your `.env` file).
+
+## Docker Deployment
+
+You can easily deploy the application using Docker. This method requires Docker and Docker Compose to be installed on your system.
+
+### Steps
+
+1. **Set up environment variables**
+
+   Create a `.env` file in the project root with the following variables:
+   
+   ```
+   SECRET_KEY='your-django-secret-key'
+   FERNET_KEY='your-fernet-key'
+   DEBUG=false
+   ```
+   
+   You can generate these keys as described in the Setup Instructions section above.
+
+2. **Build and run the Docker container**
+
+   ```bash
+   docker-compose up -d --build
+   ```
+
+3. **Access the application**
+
+   The application will be available at `http://localhost:8000/`.
