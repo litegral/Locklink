@@ -1,0 +1,26 @@
+{% extends 'shortener/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h1 class="text-center mt-5">LockLink</h1>
+        <p class="text-center">Create short, secure, and encrypted links.</p>
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                <input type="url" name="original_url" class="form-control" placeholder="Enter URL" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" name="password" class="form-control" placeholder="Enter password (optional)">
+            </div>
+            <div class="mb-3">
+                <label for="expiration" class="form-label">Expiration (in minutes, optional)</label>
+                <input type="number" name="expiration" id="expiration" class="form-control" min="1">
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Shorten</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %} 
