@@ -25,7 +25,7 @@ This guide will walk you through setting up the project for local development.
 ```bash
 # Replace <your-repository-url> with the actual URL of the repository
 git clone <your-repository-url>
-cd django-projects
+cd Locklink
 ```
 
 **Step 2: Create and Activate a Virtual Environment**
