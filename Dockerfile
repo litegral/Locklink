@@ -25,5 +25,4 @@ RUN chmod +x /app/entrypoint.sh
 # Expose port
 EXPOSE 8000
 
-# Set entrypoint
-ENTRYPOINT ["/app/entrypoint.sh"] 
+CMD ["sh", "/app/entrypoint.sh"] 
